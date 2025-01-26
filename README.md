@@ -1,6 +1,6 @@
 # Readme
 
-Using zwift-memory-monitor to read and broadcast player state records.
+Using rouvy-memory-monitor to read and broadcast player state records.
 
 ## Use
 
@@ -16,12 +16,7 @@ node index.js
 
 ## Command line switches
 
-```
---verbose
-```
-
-Provides more output (for debugging purposes)
-
+None
 
 ## Packaging
 
@@ -45,6 +40,6 @@ MIT
 
 # Repository
 
-https://github.com/zwfthcks/zwift-broadcaster-two
+https://github.com/jeroni7100/rouvy-broadcaster
 
 Owner/maintainer: Jesper Rosenlund Nielsen ( @jeroni7100 / @zwfthcks/jeroni7100 )
