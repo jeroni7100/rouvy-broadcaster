@@ -62,6 +62,7 @@ pickPort({ minPort: 6900, maxPort: 6999, ip: host, type: 'udp' }).then((port) =>
             console.log('Monitor created')
             
             monitor.on('outgoingPlayerState', (playerState) => {
+                playerState.speed = playerState.speed * 1000 // m/s to mm/s
                 multicast(JSON.stringify({ ...playerState, packetInfo: { source: 'rouvy' } }))
             })
         }
