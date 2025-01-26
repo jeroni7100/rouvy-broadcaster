@@ -60,9 +60,13 @@ pickPort({ minPort: 6900, maxPort: 6999, ip: host, type: 'udp' }).then((port) =>
         if (RouvyPacketMonitor) {
             var monitor = new RouvyPacketMonitor(ip)
             console.log('Monitor created')
+
+            monitor.start()
             
             monitor.on('outgoingPlayerState', (playerState) => {
-                playerState.speed = playerState.speed * 1000 // m/s to mm/s
+                playerState.speed = playerState.speed * 3600000
+                playerState.cadence = playerState.cadence == 255 ? 0 : playerState.cadence
+                delete playerState.time
                 multicast(JSON.stringify({ ...playerState, packetInfo: { source: 'rouvy' } }))
             })
         }
