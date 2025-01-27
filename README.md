@@ -1,12 +1,30 @@
 # Readme
 
-Using [rouvy-memory-monitor](https://github.com/jeroni7100/rouvy-memory-monitor) to read and broadcast player state records.
+Using [rouvy-packet-monitor](https://github.com/jeroni7100/rouvy-packet-monitor) to read and broadcast player state records.
 
 This can be used as an add-on to [Pedal Games](https://pedalgames.online) to use power, cadence, speed, and distance from [Rouvy](https://rouvy.com) as input.
 
+## Prerequisites
+
+The app intercepts the UDP sent from the Rouvy game client to the Rouvy game server.
+
+You must make the following OS specific setup of your computer:
+
+### Windows
+You must install [Npcap](https://nmap.org/npcap/) with WinPcap compatibility on your PC.
+
+This will let the application capture network traffic (from next time you start it).
+
+### macOS
+
+Your user must have access rights to enable capture of network traffic. You can enable it with the following command in Terminal (it will give your user read access to the network devices /dev/bpf*):
+
+sudo chmod o+r /dev/bpf*
+This will let the application capture network traffic (from next time you start it).
+
 ## Use
 
-Download and run the compiled executable from Releases or run it from code.
+Windows: Download and run the compiled executable from Releases or run it from code.
 
 From code:
 
