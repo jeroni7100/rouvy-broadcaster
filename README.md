@@ -11,15 +11,19 @@ The app intercepts the UDP sent from the Rouvy game client to the Rouvy game ser
 You must make the following OS specific setup of your computer:
 
 ### Windows
+
 You must install [Npcap](https://nmap.org/npcap/) with WinPcap compatibility on your PC.
 
 This will let the application capture network traffic (from next time you start it).
 
 ### macOS
 
-Your user must have access rights to enable capture of network traffic. You can enable it with the following command in Terminal (it will give your user read access to the network devices /dev/bpf*):
+Your user must have access rights to enable capture of network traffic. You can enable it with the following command in Terminal (it will give your user read access to the network devices `/dev/bpf*`):
 
+``
 sudo chmod o+r /dev/bpf*
+`` 
+
 This will let the application capture network traffic (from next time you start it).
 
 ## Use
