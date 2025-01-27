@@ -1,8 +1,14 @@
 # Readme
 
-Using rouvy-memory-monitor to read and broadcast player state records.
+Using [rouvy-memory-monitor](https://github.com/jeroni7100/rouvy-memory-monitor) to read and broadcast player state records.
+
+This can be used as an add-on to [Pedal Games](https://pedalgames.online) to use power, cadence, speed, and distance from [Rouvy](https://rouvy.com) as input.
 
 ## Use
+
+Download and run the compiled executable from Releases or run it from code.
+
+From code:
 
 ```
 npm start
@@ -13,6 +19,9 @@ or
 ```
 node index.js
 ```
+
+In Pedal Games, choose **Powerbroadcaster** as the data source
+
 
 ## Command line switches
 
