@@ -64,10 +64,13 @@ pickPort({ minPort: 6900, maxPort: 6999, ip: host, type: 'udp' }).then((port) =>
             monitor.start()
             
             monitor.on('outgoingPlayerState', (playerState) => {
-                playerState.speed = playerState.speed * 3600000
+                if (playerState?.units?.speed == 'm/s') {
+                    playerState.speed = playerState.speed * 3600000
+                    playerState.units.speed = 'mm/h'
+                }
                 playerState.cadence = playerState.cadence == 255 ? 0 : playerState.cadence
                 delete playerState.time
-                multicast(JSON.stringify({ ...playerState, packetInfo: { source: 'rouvy' } }))
+                multicast(JSON.stringify(playerState))
             })
         }
         

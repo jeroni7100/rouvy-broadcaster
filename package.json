@@ -1,6 +1,6 @@
 {
   "name": "rouvybroadcaster",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Broadcast ouvy playerstate via UDP",
   "license": "MIT",
   "author": "",
